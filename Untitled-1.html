@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width", initrial-scale="1.0">
+    <title>Instrukcja IF</title>
+</head>
+<body>
+    <script>
+        //pobierz od uzytkownika liczbę
+        // i wyświel czy jest ona dodatnia czy ujemna
+        /* operatory porównania:
+        > - większe
+        < - mniejsze
+        >= - większe bądz równę
+        <= - mniejsze bądz równę
+        == - równe
+        === - równe musz być typy
+        != - różne
+        !== - różne ale te same typy
+
+        */
+       //pobierz od urzytkownika liczbę 
+       //i wyświetl czy jest ona dodania czy ujemna
+       function task1()
+       {
+            var numberFromUser;
+
+            numberFromUser = 4; 
+  
+            if(numberFromUser >= 0)
+              {
+               document.writeln("Liczba jest dodatnia<br/>");
+              }
+            if(numberFromUser < 0)
+               document.writeln("Liczba jest ujemna<br/>");
+
+            if(numberFromUser >= 0)
+               document.writeln("Liczba jest dodatnia<br/>");
+            else
+               document.writeln("Liczba jest ujemna<br/>");
+          
+    }
+
+task1();
+
+////Napisz program,
+//który wyświetli informacje czy liczba jest parzysta czy nieparzysta.
+function task2()
+{
+    var numberFromUser = 89;
+
+    var rest = numberFromUser % 2;
+
+    if (rest == 0)
+        document.write("Liczba parzysta<br/>");
+    else    
+        document.write("Liczba nieparzysta<br/>")
+}
+//task1();
+task2();
+    </script>
+
+</body>
+</html>
