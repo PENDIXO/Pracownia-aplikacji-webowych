@@ -64,23 +64,23 @@
 
        //pobierz od urzytkownika liczbę 
        //i wyświetl czy jest ona dodania czy ujemna
-       function task1()
-       {
-            var numberFromUser;
+function task1()
+    {
+        var numberFromUser;
 
-            numberFromUser = 4; 
+        numberFromUser = 4; 
   
-            if(numberFromUser >= 0)
-              {
-               document.writeln("Liczba jest dodatnia<br/>");
-              }
-            if(numberFromUser < 0)
-               document.writeln("Liczba jest ujemna<br/>");
+        if(numberFromUser >= 0)
+            {
+            document.writeln("Liczba jest dodatnia<br/>");
+            }
+        if(numberFromUser < 0)
+            document.writeln("Liczba jest ujemna<br/>");
 
-            if(numberFromUser >= 0)
-               document.writeln("Liczba jest dodatnia<br/>");
-            else
-               document.writeln("Liczba jest ujemna<br/>");
+        if(numberFromUser >= 0)
+            document.writeln("Liczba jest dodatnia<br/>");
+        else
+            document.writeln("Liczba jest ujemna<br/>");
           
     }
 
@@ -101,7 +101,6 @@ function task2()
 }
 
 //task2();
-//task2()
 
     //Napisz program, który wyświetli informacje
     //czy liczba jest z zakresu <1 ; 10).
@@ -241,7 +240,7 @@ function task9()
 {
     var firstnumber ,secondnumber;
 
-    firstnumber = 3
+    firstnumber = 5
     secondnumber = 5
 
     if (firstnumber > secondnumber)
@@ -263,11 +262,117 @@ function task10()
 {
     var numberFromUser = 2000
 
-    if(numberFromUser == 2000)
+    if(numberFromUser % 4 == 0 && numberFromUser % 100 != 0 || numberFromUser % 400 == 0)
         document.writeln("Rok jest przestępny<br/>")
     else
         document.writeln("Rok nie jest przestępny<br/>")
 }
+//task10()
+function task11()
+    //Napisz program, który poprosi użytkownika o podanie liczby całkowitej i sprawdzi, czy jest ona podzielna zarówno przez 3, jak i przez 5. Wyświetl odpowiedni komunikat.
+{
+    var numberFromUser = 30
+    
+    if(numberFromUser % 3 == 0 && numberFromUser % 5 == 0)
+        document.writeln("Liczba jest podzielna przez 3 i 5<br/>")
+    else 
+        document.writeln("Liczba nie jest podzielna przez 3 i 5<br/>")
+}
+//task11()
+function task12()
+    //Napisz program, który poprosi użytkownika o podanie masy ciała (w kilogramach) i wzrostu (w metrach).
+    //Na  podstawie tych danych oblicz wskaźnik BMI (Body Mass Index) i wyświetl odpowiedni komunikat informujący o stanie zdrowia.
+        //poniżej 16 - wygłodzenie
+        //16 - 16.99 - wychudzenie
+        //17 - 18.49 - niedowagę
+        //18.5 - 24.99 - wagę prawidłową
+        //25.0 - 29.9 - nadwagę
+        //30.0 - 34.99 - I stopień otyłości
+        //35.0 - 39.99 - II stopień otyłości
+        //powyżej 40.0 - otyłość skrajną
+
+        //Wzór:
+
+        //BMI = masa/wysokość^2
+{
+    var Mass , Height ,BMI
+
+    Mass = 100
+    Height = 1.88
+    BMI = Mass/ (Height * Height)
+
+    if(BMI < 16)
+        document.writeln("Wygłodzenie<br/>")
+    else if(BMI < 17)
+        document.writeln("Wychudzenie<br/>")
+    else if(BMI < 18.5)
+        document.writeln("Niedowaga<br/>")
+    else if(BMI < 25)
+        document.writeln("Waga Prawidłowa<br/>")
+    else if(BMI < 30)
+        document.writeln("Nadwaga<br/>")
+    else if(BMI < 35)
+        document.writeln("1 stopień otyłości<br/>")
+    else if(BMI < 40)
+        document.writeln("2 stopień otyłości<br/>")
+    else 
+        document.writeln("Otyłość skrajna<br/>")
+}
+//task12()
+function task13()
+    //Napisz program, który poprosi użytkownika o podanie długości trzech odcinków i sprawdzi, czy można zbudować z nich trójkąt. Wyświetl odpowiedni komunikat.
+{
+    var lengthFirst, lengthTwo, lengthSecond
+
+    lengthFirst = 18
+    lengthTwo = 7
+    lengthSecond = 8
+
+    if(lengthFirst > lengthTwo + lengthSecond)
+        document.writeln("Trojkat jest prawidłowy<br/>")
+    else if(lengthTwo > lengthFirst + lengthSecond)
+        document.writeln("Trojkat jest prawidłowy<br/>")
+    else if(lengthSecond > lengthFirst + lengthTwo)
+        document.writeln("Trojkat jest prawidłowy<br/>")
+    else
+        document.writeln("Trojkąt nie istnieje<br/>")
+
+}
+//task13()
+function task14()
+    //Napisz program, który poprosi użytkownika o podanie liczby dodatniej i obliczy jej pierwiastek kwadratowy, jeśli jest to możliwe. Wyświetl wynik lub odpowiedni komunikat, jeśli liczba jest ujemna.
+{
+    var numberFromUser = 4
+
+    if(numberFromUser > 0)
+        document.writeln("pierwiastek jest obliczalny <br/>" + Math.sqrt(numberFromUser));
+    else
+        document.writeln("pierwiastek nie jest obliczalny<br/>");
+}
+//task14()
+function task15()
+    //Program sprawdzający czy podana data jest poprawna (np. sprawdzając, czy dzień jest z zakresu od 1 do 31, miesiąc od 1 do 12 itd.)
+{
+    var Day, Month, Year
+    
+    Day = 30
+    Month = 5
+    Year = 1999
+    
+    if(Day > 1 && Day <= 31)
+        document.writeln("Data jest poprawna<br/>" + Day)
+    else 
+        document.writeln("Data nie jest poprawna<br/>")
+    if(Month > 1 && Month <= 12)
+        document.writeln("Data jest poprawna<br/>" + Month)
+    else 
+        document.writeln("Data nie jest poprawna<br/>")
+    if(Year > 0 && Year <= 2025)
+        document.writeln("Data jest poprawna<br/>" + Year)
+    else
+        document.writeln("Data nie jest poprawna<br/>")
+}
+//task15()
     </script>
 </body>
 </html>
